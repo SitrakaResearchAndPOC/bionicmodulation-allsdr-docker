@@ -40,8 +40,12 @@ RUN apt-get install -y -o Acquire::Retries=5 --no-install-recommends \
 RUN apt-get install -y -o Acquire::Retries=5 --no-install-recommends \
     hackrf \
     rtl-sdr \ 
-    limesuite 
-
+    limesuite \ 
+    liblimesuite-dev \
+    liblimesuite-doc\
+    liblimesuite17.12-1 \
+    limesuite-udev
+    
 ## Installing driver PlutoSDR
 RUN apt-get install -y -o Acquire::Retries=5 --no-install-recommends \
     gr-iio \
