@@ -75,7 +75,10 @@ docker-compose exec bionicmodulation ping pluto.local
 ```
 docker-compose exec bionicmodulation ping pluto.local.usb
 ```
-
+## PLUG AND TEST FOR BLADERF
+```
+bladeRF-cli -l
+```
 ## LAUNCHING GNURADIO : 
 ```
 xhost +; docker-compose exec bionicmodulation gnuradio-companion
