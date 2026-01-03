@@ -1,5 +1,10 @@
 # bionicmodulation-allsdr-docker
-This is roadmap for dockerized modulation using many sdr : pluto sdr an his variant (zynq compatible), usrp, hackrf and for future bladerf if possible
+This is roadmap for dockerized modulation using many sdrs and voice support  on docker
+sdr could be  : 
+* pluto sdr an his variant (zynq compatible)
+* usrp
+* hackrf
+* bladerf for future plan
 # Install all dependecies
 ```
 apt update
