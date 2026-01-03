@@ -43,9 +43,15 @@ docker-compose ps
 ```
 mkdir gnuradio
 ```
+All autorise on gnuradio
 ```
 chmod -R 777 ./gnuradio
 ```
+All autorise usb : 
+```
+chmod -R 777 /dev/bus/usb
+```
+
 ```
 xhost +; docker-compose exec bionicmodulation bash
 ```
