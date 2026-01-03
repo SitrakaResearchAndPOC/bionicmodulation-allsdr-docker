@@ -1,5 +1,77 @@
 # bionicmodulation-allsdr-docker
 This is roadmap for dockerized modulation using many sdr : pluto sdr an his variant (zynq compatible), usrp, hackrf and for future bladerf if possible
+# Install all dependecies
+```
+apt update
+```
 
+```
+apt install docker.io docker-compose git
+```
+# Download all file
 
+```
+git clone https://github.com/SitrakaResearchAndPOC/bionicmodulation-allsdr-docker.git
+```
+# Pre-install
+```
+cd bionicmodulation-allsdr-docker
+```
+```
+docker-compose down
+```
+```
+docker-compose down --volumes --remove-orphans
+```
+```
+docker-compose build --no-cache
+```
+# Installation
+```
+docker-compose up -d
+```
+# Verification
+```
+docker-compose ps
+```
+# Testing
+```
+mkdir gnuradio
+```
+```
+chmod -R 777 ./gnuradio
+```
+```
+xhost +; docker-compose exec bionicmodulation bash
+```
+```
+exit
+```
+## PLUG AND TEST FOR USRP :
+```
+docker-compose exec bionicmodulation uhd_usrp_probe
+```
+## PLUG AND TEST FOR HACKRF 
+```
+docker compose exec bionicmodulation hackrf-info
+```
+## PLUG AND TEST FOR PLUTOSDR 
+* For network
+```
+docker-compose exec bionicmodulation ping pluto.local
+```
+* For usb
+```
+docker-compose exec bionicmodulation ping pluto.local.usb
+```
+
+## LAUNCHING GNURADIO : 
+```
+xhost +; docker-compose exec bionicmodulation gnuradio-companion
+```
+
+# FOR PRUNE PROJECT 
+```
+docker system prune -f
+```
 
